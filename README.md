@@ -46,8 +46,8 @@ This project set is ideal for:
 
 ---
 
-## 📄 License
+## 🧾 License
 
-This repository is licensed under the [MIT License](../../LICENSE).  
+This repository is licensed under the [MIT License](./LICENSE).  
 All projects and content are free to use for personal and educational purposes.  
 Thanarat Chuehpasuk © 2025
