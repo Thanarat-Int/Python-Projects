@@ -1,8 +1,10 @@
-# 🐍 Python Projects
+## 🧩 Python Projects
 
-A curated collection of Python-based mini applications designed for learning, experimentation, and automation. Each project is self-contained with source code, clear instructions, and documentation to help you understand core programming concepts and build real-world skills.
+A curated collection of Python-based mini applications developed by **Thanarat Chuehpasuk** for self-learning, portfolio building, and automation exploration.  
+Each project is self-contained with source code, clear instructions, and documentation — aimed at strengthening real-world coding and problem-solving skills.
 
-> 🚧 This section is continuously evolving. Projects are built for educational purposes only and do not involve sensitive or proprietary data.
+> 🛠️ These projects are created and maintained by me as part of my personal development journey.  
+> All content is intended for educational purposes and does not contain sensitive or proprietary data.
 
 ---
 
