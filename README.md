@@ -3,8 +3,9 @@
 A curated collection of Python-based mini applications developed by **Thanarat Chuehpasuk** for self-learning, portfolio building, and automation exploration.  
 Each project is self-contained with source code, clear instructions, and documentation — aimed at strengthening real-world coding and problem-solving skills.
 
-> 🛠️ These projects are created and maintained by me as part of my personal development journey.  
-> All content is intended for educational purposes and does not contain sensitive or proprietary data.
+> 🧠 These projects are authored and copyrighted by **Thanarat Chuehpasuk** as part of a personal development journey.  
+> While all rights are reserved, you are welcome to use, study, and build upon these works for personal and educational growth.  
+> Proper credit is appreciated when sharing or adapting the content.
 
 ---
 
