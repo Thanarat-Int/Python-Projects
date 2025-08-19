@@ -4,7 +4,7 @@ A Python GUI app to track birthdays and get reminders if someone has a birthday 
 
 ## 📸 Screenshot
 
-![Birthday Reminder Screenshot](./screenshot.png)
+![Birthday Reminder Screenshot](./screenshot1.jpg)
 
 ## Features
 
@@ -16,3 +16,4 @@ A Python GUI app to track birthdays and get reminders if someone has a birthday 
 
 ```bash
 python birthday_reminder_gui.py
+
