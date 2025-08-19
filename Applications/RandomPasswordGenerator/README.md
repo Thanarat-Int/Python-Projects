@@ -2,6 +2,10 @@
 
 A simple Python GUI application to generate secure, random passwords based on user-defined settings.
 
+## 📸 Screenshot
+
+![Password Generator GUI](./randompass.jpg)
+
 ## Features
 
 - Choose password length
