@@ -1,13 +1,17 @@
-# 🔔 Alarm
+# 🔔 Python Alarm Clock
 
-A simple Python alarm clock with sound notification and time scheduling.
+A simple Python desktop alarm clock that plays a sound at a user-defined time.
 
-## How to Run
+## 📦 Features
+- Set alarm in HH:MM AM/PM format
+- Plays an audio notification when the time is reached
+- Command-line based interface
+- Converts to `.exe` easily for Windows users
 
-1. Open `alarm.py`
-2. Enter the time in `HH:MM AM/PM` format
-3. Wait for the sound to play
+## 🖥️ Requirements
 
-## Files
-- `alarm.py`
-- `alarm_sound.mp3`
+- Python 3.7+
+- `playsound==1.2.2`  
+  Install with:
+  ```bash
+  pip install playsound==1.2.2
