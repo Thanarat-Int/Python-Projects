@@ -1,18 +1,14 @@
-# 🎂 GUI Birthday Reminder
+# 🎂 Birthday Reminder
 
-A Python GUI app to track birthdays and get reminders if someone has a birthday today.
-
-## 📸 Screenshot
-
-![Birthday Reminder Screenshot](./screenshot1.jpg)
+A simple Python CLI app to save birthdays and get reminders if someone has a birthday today.
 
 ## Features
 
-- Add a person’s name and birthday
-- Check if today is anyone’s birthday
-- Built with Tkinter
+- Add name and birthday
+- Check who has a birthday today
+- Saves data in `birthdays.json`
 
 ## How to Run
 
 ```bash
-python birthday_reminder_gui.py
+python birthday_reminder.py

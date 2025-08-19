@@ -1,50 +1,58 @@
-import json
+import tkinter as tk
+from tkinter import messagebox
 import datetime
+import json
+import os
 
-def load_birthdays(filename="birthdays.json"):
-    try:
-        with open(filename, "r") as f:
-            return json.load(f)
-    except FileNotFoundError:
+DATA_FILE = "birthdays.json"
+
+def load_birthdays():
+    if not os.path.exists(DATA_FILE):
         return {}
+    with open(DATA_FILE, "r") as f:
+        return json.load(f)
 
-def save_birthdays(birthdays, filename="birthdays.json"):
-    with open(filename, "w") as f:
-        json.dump(birthdays, f, indent=4)
+def save_birthdays(data):
+    with open(DATA_FILE, "w") as f:
+        json.dump(data, f, indent=4)
 
-def add_birthday(name, date_str):
+def add_birthday():
+    name = name_entry.get()
+    date = date_entry.get()
+    try:
+        datetime.datetime.strptime(date, "%Y-%m-%d")
+        birthdays = load_birthdays()
+        birthdays[name] = date
+        save_birthdays(birthdays)
+        messagebox.showinfo("Success", f"Added birthday for {name}")
+        name_entry.delete(0, tk.END)
+        date_entry.delete(0, tk.END)
+    except ValueError:
+        messagebox.showerror("Error", "Date must be in YYYY-MM-DD format")
+
+def check_birthdays():
+    today = datetime.date.today().strftime("%m-%d")
     birthdays = load_birthdays()
-    birthdays[name] = date_str
-    save_birthdays(birthdays)
-    print(f"🎉 เพิ่มวันเกิดของ {name} สำเร็จ")
-
-def check_today_birthdays():
-    today = datetime.date.today()
-    today_str = today.strftime("%m-%d")
-    birthdays = load_birthdays()
-    found = False
-
-    for name, date_str in birthdays.items():
-        if date_str[5:] == today_str:
-            print(f"🎈 วันนี้เป็นวันเกิดของ {name}!")
-            found = True
-    if not found:
-        print("📅 วันนี้ไม่มีใครเกิดครับ")
-
-def main():
-    print("🎂 Birthday Reminder")
-    print("[1] เช็ควันเกิดวันนี้")
-    print("[2] เพิ่มวันเกิดใหม่")
-    choice = input("เลือกเมนู: ")
-
-    if choice == "1":
-        check_today_birthdays()
-    elif choice == "2":
-        name = input("ใส่ชื่อ: ")
-        date_str = input("ใส่วันเกิด (รูปแบบ YYYY-MM-DD): ")
-        add_birthday(name, date_str)
+    matches = [name for name, date in birthdays.items() if date[5:] == today]
+    if matches:
+        messagebox.showinfo("🎉 Today’s Birthdays", "\n".join(matches))
     else:
-        print("❌ เลือกไม่ถูกต้อง")
+        messagebox.showinfo("No Birthdays", "📅 No birthdays today.")
 
-if __name__ == "__main__":
-    main()
+# GUI setup
+root = tk.Tk()
+root.title("🎂 Birthday Reminder")
+root.geometry("400x300")
+
+tk.Label(root, text="Name:").pack()
+name_entry = tk.Entry(root, width=30)
+name_entry.pack()
+
+tk.Label(root, text="Birthday (YYYY-MM-DD):").pack()
+date_entry = tk.Entry(root, width=30)
+date_entry.pack()
+
+tk.Button(root, text="Add Birthday", command=add_birthday).pack(pady=10)
+tk.Button(root, text="Check Today's Birthdays", command=check_birthdays).pack()
+
+root.mainloop()
