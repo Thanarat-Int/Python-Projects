@@ -1,14 +1,19 @@
-# 🎂 Birthday Reminder
+# 🔔 GUI Alarm Clock
 
-A simple Python CLI app to save birthdays and get reminders if someone has a birthday today.
+A simple Python GUI alarm clock with sound and scheduling.
+
+## 📸 Screenshot
+
+![Alarm Screenshot](./screenshot1.jpg)
 
 ## Features
 
-- Add name and birthday
-- Check who has a birthday today
-- Saves data in `birthdays.json`
+- Set alarm time in 24-hour format
+- Plays sound when alarm time is reached
+- Uses `pygame` for audio
 
 ## How to Run
 
 ```bash
-python birthday_reminder.py
+pip install pygame
+python alarm_gui.py
