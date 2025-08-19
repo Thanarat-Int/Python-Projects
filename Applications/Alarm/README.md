@@ -1,17 +1,20 @@
-# 🔔 Python Alarm Clock
+# 🔔 GUI Alarm Clock
 
-A simple Python desktop alarm clock that plays a sound at a user-defined time.
+A simple Python GUI alarm clock with sound and scheduling.
 
-## 📦 Features
-- Set alarm in HH:MM AM/PM format
-- Plays an audio notification when the time is reached
-- Command-line based interface
-- Converts to `.exe` easily for Windows users
+## 📸 Screenshot
 
-## 🖥️ Requirements
+![Alarm GUI](./screenshot1.jpg)
 
-- Python 3.7+
-- `playsound==1.2.2`  
-  Install with:
-  ```bash
-  pip install playsound==1.2.2
+## Features
+
+- Set alarm time in 24-hour format (HH:MM)
+- Countdown runs in the background using threading
+- Plays alarm sound using pygame
+- Built with Tkinter
+
+## How to Run
+
+```bash
+pip install pygame
+python alarm_gui.py
