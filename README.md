@@ -21,10 +21,10 @@ All Python projects are located under the following folders:
 
 | Project | Description |
 |--------|-------------|
-| 🔔 [Alarm](../Applications/Alarm) | A simple Python alarm clock with audio notification and time scheduling. |
-| 🎂 [Birthday Reminder](../Applications/Birthday%20Reminder) | Notifies user about upcoming birthdays using scheduled time triggers. |
-| 🔐 [Random Password Generator](../Applications/Random%20Password%20Generator) | Creates secure, random passwords based on user-defined criteria. |
-| 📁 *(More coming soon)* | Additional tools and scripts under development... |
+| 🔔 [Alarm](Applications/Alarm) | A simple Python alarm clock with audio notification and time scheduling. |
+| 🎂 [Birthday Reminder](Applications/BirthdayReminder) | Notifies user about upcoming birthdays using scheduled time triggers. |
+| 🔐 [Random Password Generator](Applications/RandomPasswordGenerator) | Creates secure, random passwords based on user-defined criteria. |
+| 📦 *(More coming soon)* | Additional tools and scripts under development... |
 
 ---
 
