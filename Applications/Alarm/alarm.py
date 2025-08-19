@@ -1,34 +1,56 @@
+import tkinter as tk
+from tkinter import messagebox
 import datetime
 import time
-from playsound import playsound
+import threading
+import pygame
 
-def get_alarm_time():
-    while True:
-        alarm_input = input("⏰ ตั้งเวลาปลุก (รูปแบบ HH:MM AM/PM): ").strip()
-        try:
-            alarm_time = datetime.datetime.strptime(alarm_input, "%I:%M %p")
-            now = datetime.datetime.now()
-            # รวมวันและเวลาปลุก
-            alarm_time = now.replace(hour=alarm_time.hour, minute=alarm_time.minute, second=0, microsecond=0)
-            # ถ้าตั้งเวลาแล้วเวลาผ่านไปแล้ว → เลื่อนเป็นวันถัดไป
-            if alarm_time < now:
-                alarm_time += datetime.timedelta(days=1)
-            return alarm_time
-        except ValueError:
-            print("❌ รูปแบบไม่ถูกต้อง! กรุณาใช้ HH:MM AM/PM เช่น 07:30 AM")
+# Initialize pygame for audio playback
+pygame.init()
 
-def main():
-    print("=== Python Alarm Clock ===")
-    alarm_time = get_alarm_time()
-    print(f"🔔 รอจนถึงเวลา {alarm_time.strftime('%I:%M %p')} เพื่อปลุก...")
-
-    while True:
+def set_alarm():
+    alarm_time = time_entry.get()
+    try:
+        # รับเวลาในรูปแบบ HH:MM
+        alarm_dt = datetime.datetime.strptime(alarm_time, "%H:%M")
         now = datetime.datetime.now()
-        if now >= alarm_time:
-            print("🔊 ถึงเวลาปลุก! ตื่นได้แล้ว!")
-            playsound("alarm_sound.mp3")
-            break
-        time.sleep(1)
+        target = now.replace(hour=alarm_dt.hour, minute=alarm_dt.minute, second=0, microsecond=0)
 
-if __name__ == "__main__":
-    main()
+        # ถ้าตั้งเวลาเป็นอดีต → เพิ่มเป็นวันถัดไป
+        if target < now:
+            target += datetime.timedelta(days=1)
+
+        messagebox.showinfo("Alarm Set", f"Alarm set for {target.strftime('%I:%M %p')}")
+        # สร้าง thread สำหรับรอเวลา
+        threading.Thread(target=wait_and_ring, args=(target,), daemon=True).start()
+
+    except ValueError:
+        messagebox.showerror("Invalid Time", "Please enter time in HH:MM (24-hour format)")
+
+def wait_and_ring(target_time):
+    while datetime.datetime.now() < target_time:
+        time.sleep(1)
+    play_alarm()
+
+def play_alarm():
+    try:
+        pygame.mixer.music.load("alarm_sound.mp3")
+        pygame.mixer.music.play()
+        messagebox.showinfo("⏰ Wake Up!", "It's time!")
+    except Exception as e:
+        messagebox.showerror("Error", f"Could not play alarm sound.\n{str(e)}")
+
+# GUI layout
+root = tk.Tk()
+root.title("🔔 Alarm Clock")
+root.geometry("300x200")
+root.resizable(False, False)
+
+tk.Label(root, text="Set Alarm Time (HH:MM):").pack(pady=10)
+
+time_entry = tk.Entry(root, width=10, justify='center', font=("Arial", 14))
+time_entry.pack()
+
+tk.Button(root, text="Set Alarm", command=set_alarm).pack(pady=20)
+
+root.mainloop()
