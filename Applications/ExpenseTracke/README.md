@@ -4,7 +4,7 @@ A simple personal expense tracker built with Python and Tkinter.
 
 ## 📸 Screenshot
 
-![Expense Tracker Screenshot](./screenshot.png)
+![Expense Tracker Screenshot](./s4.jpg)
 
 ## Features
 
