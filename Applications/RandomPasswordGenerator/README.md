@@ -1,20 +1,14 @@
-# 🔐 GUI Random Password Generator
+# 🔐 Random Password Generator
 
-A simple Python GUI application to generate secure, random passwords based on user-defined settings.
-
-## 📸 Screenshot
-
-![Password Generator GUI](./randompass.jpg)
+A simple Python CLI tool to generate strong, random passwords based on user-defined criteria.
 
 ## Features
 
-- Choose password length
-- Include uppercase letters, digits, and special characters
-- Generate password and copy it to clipboard
-- Built with Tkinter
+- Set password length
+- Include uppercase letters, numbers, and symbols
+- Copies the result to clipboard automatically
 
 ## How to Run
 
 ```bash
-pip install pyperclip
-python password_generator_gui.py
+python password_generator.py
