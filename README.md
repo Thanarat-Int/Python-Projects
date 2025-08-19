@@ -22,14 +22,14 @@ All Python projects are located under the following folders:
 
 | Project | Description |
 |--------|-------------|
-| 🔔 [Alarm](Applications/Alarm) | A simple Python alarm clock with audio notification and time scheduling. |
-| 🎂 [Birthday Reminder](Applications/BirthdayReminder) | Notifies user about upcoming birthdays using scheduled time triggers. |
-| 🔐 [Random Password Generator](Applications/RandomPasswordGenerator) | Creates secure, random passwords based on user-defined criteria. |
-| 🧾 Expense Tracke | Additional tools and scripts under development... |
-| 🧹 Auto File Organizer for Desktop | Additional tools and scripts under development... |
-| 🌐 Weather Dashboard | Additional tools and scripts under development... |
-| 🛠️ System Cleaner GUI | Additional tools and scripts under development... |
-| 📝 Smart Notes App | Additional tools and scripts under development... |
+| 🔔 [Alarm](Applications/Alarm) | A Python GUI alarm clock with audio notification and time scheduling. |
+| 🎂 [Birthday Reminder](Applications/BirthdayReminder) | A GUI-based app to notify users of upcoming birthdays using scheduled alerts. |
+| 🔐 [Random Password Generator](Applications/RandomPasswordGenerator) | A Python GUI app to create secure, random passwords with clipboard copy. |
+| 💰 [Expense Tracker](Applications/ExpenseTracker) | Track daily expenses with categories and auto-summary using SQLite. |
+| 🧹 [Auto File Organizer for Desktop](Applications/FileOrganizer) | Automatically organizes desktop files into folders by file type. |
+| 🌤️ [Weather Dashboard](Applications/WeatherDashboard) | Displays current weather data from OpenWeather API in a clean GUI. |
+| 🧼 [System Cleaner GUI](Applications/SystemCleaner) | Deletes temporary files, clears cache, and frees disk space with one click. |
+| 📝 [Smart Notes App](Applications/SmartNotesApp) | A minimal note-taking GUI with autosave and markdown support. |
 
 ---
 
