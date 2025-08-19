@@ -26,6 +26,10 @@ All Python projects are located under the following folders:
 | 🎂 [Birthday Reminder](Applications/BirthdayReminder) | Notifies user about upcoming birthdays using scheduled time triggers. |
 | 🔐 [Random Password Generator](Applications/RandomPasswordGenerator) | Creates secure, random passwords based on user-defined criteria. |
 | 🧾 Expense Tracke | Additional tools and scripts under development... |
+| 🧹 Auto File Organizer for Desktop | Additional tools and scripts under development... |
+| 🌐 Weather Dashboard | Additional tools and scripts under development... |
+| 🛠️ System Cleaner GUI | Additional tools and scripts under development... |
+| 📝 Smart Notes App | Additional tools and scripts under development... |
 
 ---
 
