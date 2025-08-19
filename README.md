@@ -12,8 +12,9 @@ Each project is self-contained with source code, clear instructions, and documen
 ## 📁 Project Structure
 
 All Python projects are located under the following folders:
-- [`Applications`](../Applications): General-purpose Python tools
-- [`Machine Learning Applications`](../Machine%20Learning%20Applications): ML-specific projects and models
+
+- [`Applications`](Applications): General-purpose Python tools
+- [`Machine Learning Applications`](Machine-Learning-Applications): ML-specific projects and models
 
 ---
 
