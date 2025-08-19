@@ -26,9 +26,9 @@ All Python projects are located under the following folders:
 | 🎂 [Birthday Reminder](Applications/BirthdayReminder) | A GUI-based app to notify users of upcoming birthdays using scheduled alerts. |
 | 🔐 [Random Password Generator](Applications/RandomPasswordGenerator) | A Python GUI app to create secure, random passwords with clipboard copy. |
 | 💰 [Expense Tracker](Applications/ExpenseTracke) | Track daily expenses with categories and auto-summary using SQLite. |
-| 🧹 [Auto File Organizer for Desktop](Applications/FileOrganizer) | Automatically organizes desktop files into folders by file type. |
+| 🧹 [Auto File Organizer for Desktop](Applications/AutoFileOrganizerfordesktop) | Automatically organizes desktop files into folders by file type. |
 | 🌤️ [Weather Dashboard](Applications/WeatherDashboard) | Displays current weather data from OpenWeather API in a clean GUI. |
-| 🧼 [System Cleaner GUI](Applications/SystemCleaner) | Deletes temporary files, clears cache, and frees disk space with one click. |
+| 🧼 [System Cleaner GUI](Applications/SystemCleanerGUI) | Deletes temporary files, clears cache, and frees disk space with one click. |
 | 📝 [Smart Notes App](Applications/SmartNotesApp) | A minimal note-taking GUI with autosave and markdown support. |
 
 ---
